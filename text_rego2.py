@@ -11,10 +11,10 @@ else:
     print("CUDA is not available. GPU support is disabled. Running on CPU.")
 
 # Set device to GPU if available
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 # Path to the folder containing your images
-images_folder = r"C:\Users\mmste\Documents\size\download\VinsFavouriteArtwork"  # Update this with your actual folder path
+images_folder = r"C:\Users\mmste\Documents\size\download\ThirstForBeauty"  # Update this with your actual folder path
 
 # Path to the folder where you want to save images with text
 text_folder = os.path.join(images_folder, "text")
@@ -48,4 +48,5 @@ for filename in tqdm(os.listdir(images_folder)):
             # Move image to no text folder
             shutil.move(image_path, os.path.join(no_text_folder, filename))
 
+print(torch.cuda.current_device())
 print("Text recognition and sorting completed.")

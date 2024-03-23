@@ -14,7 +14,7 @@ else:
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Path to the folder containing your images
-images_folder = r"C:\Users\mmste\Documents\size\download\VinsFavouriteArtwork"  # Update this with your actual folder path
+images_folder = r"E:\download done photos\polite_nonsense\Photos"  # Update this with your actual folder path
 
 # Path to the folder where you want to save images with text
 text_folder = os.path.join(images_folder, "text")
